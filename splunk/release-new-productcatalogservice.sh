@@ -21,11 +21,11 @@ else
   MARKER_VERSION="$VERSION"
   echo "[INFO] Releasing new version with product-catalog error."
 fi
-cd /home/splunker/opentelemetry-demo/splunk
+cd /home/splunker/custom-opentelemetry-demo/splunk
 
 # 1. Send deploy marker (apply前に実施)
 echo "[INFO] Sending deploy marker: ENV=$ENVIRONMENT SERVICE=$SERVICE VERSION=$MARKER_VERSION"
-/home/splunker/opentelemetry-demo/splunk/event_send.sh "$ENVIRONMENT" "$SERVICE" "$MARKER_VERSION"
+/home/splunker/custom-opentelemetry-demo/splunk/event_send.sh "$ENVIRONMENT" "$SERVICE" "$MARKER_VERSION"
 
 # 2. Apply yaml
 kubectl apply -f "$YAML"

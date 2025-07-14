@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-source /home/splunker/opentelemetry-demo/splunk/env
+source /home/splunker/custom-opentelemetry-demo/splunk/env
 REGION=jp0
 
 URL="https://ingest.${REGION}.signalfx.com/v2/event"
